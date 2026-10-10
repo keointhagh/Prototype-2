@@ -21,13 +21,18 @@ public class DetectCollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Projectile"))
         {
-            if (burst != null) Instantiate(burst, transform.position, transform.rotation);
+            if (burst != null){
+                GameObject spawnedBurst = Instantiate(burst, transform.position, transform.rotation);
+                Destroy(spawnedBurst, 2.0f);
+            }
             if (soundObject != null)
             {
-                Instantiate(soundObject, transform.position, transform.rotation);
+                GameObject spawnedSound = Instantiate(soundObject, transform.position, transform.rotation);
+                Destroy(spawnedSound, 2.0f);
             }
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
     }
+
 }
