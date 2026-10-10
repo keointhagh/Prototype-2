@@ -33,5 +33,6 @@ public class SpawnManager : MonoBehaviour
         //Randomize the speed of the animal
         MoveForward moveForward = sAnimal.GetComponent<MoveForward>();
         moveForward.speed = Random.Range(8.0f, 16.0f);
+        
     }
 }

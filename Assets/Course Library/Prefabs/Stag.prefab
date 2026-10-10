@@ -1074,3 +1074,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0772e2257ada6e4099daa9b7b2e4321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectCollision
+  burst: {fileID: 9163842254569548763, guid: 919783951ffab4c9ea8860c54de9543c, type: 3}
+  soundObject: {fileID: 3673422059155771108, guid: cc37167ca8375ca4b93a91ab2012a840, type: 3}

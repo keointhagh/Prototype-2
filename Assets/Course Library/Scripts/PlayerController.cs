@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 30.0f;
     public float xRange = 15.0f;
     public GameObject projectile;
+    public AudioSource audioSource;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,9 +33,10 @@ public class PlayerController : MonoBehaviour
         }
         transform.Translate(Vector3.right * moveInput.x * moveSpeed * Time.deltaTime);
 
-        if (fireAction.triggered)
+        if (fireAction.triggered && projectile != null)
         {
             Instantiate(projectile, transform.position, projectile.transform.rotation);
+            if (audioSource != null) audioSource.Play();
         }
     }
 }
